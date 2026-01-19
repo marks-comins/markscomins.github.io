@@ -1,0 +1,587 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+}
+
+/* Header */
+.main-header {
+    background: #fff;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agri_logo {
+    width: 360px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #000;
+}
+
+.nav-menu .contact-link {
+    color: #4CAF50;
+}
+
+
+/*  DROPDOWN MENU SECTION USED  */
+.dropdown-content {
+      position: absolute;
+      margin: 0 auto;
+      padding: 20px 50px;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+      width: 1800px;
+      top: 130px;
+      left: 53px;
+      background: rgb(255, 255, 255);
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+      border-radius: 20px;
+      z-index: 999;
+      display: flex;
+      justify-content: space-evenly;
+      pointer-events: none;
+}
+/* Questa classe verrà attivata da JS*/
+
+.dropdown-content.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+}
+
+.dropdown-content .drop-title {
+    font-weight: bold;
+}
+
+.dropdown-content a {
+      color: #374151;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+}
+
+.dropdown-content a:hover {
+      color: green;
+}
+
+/*  DROPDOWN MENU SECTION USED  */
+
+/*  DROPYDOWN MENU SECTION NEW  */
+.dropydown-content {
+      position: absolute;
+      margin: 0 auto;
+      padding: 20px 50px;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+      width: 1800px;
+      top: 130px;
+      left: 53px;
+      background: rgb(255, 255, 255);
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+      border-radius: 20px;
+      z-index: 999;
+      display: flex;
+      justify-content: space-evenly;
+      pointer-events: none;
+}
+/* Questa classe verrà attivata da JS*/
+
+.dropydown-content.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+}
+
+.dropydown-content .drop-title {
+    font-weight: bold;
+}
+
+.dropydown-content a {
+      color: #374151;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+}
+
+.dropydown-content a:hover {
+      color: green;
+}
+/*  DROPYDOWN MENU SECTION NEW  */
+
+
+
+
+/* Hero Section */
+.hero-section {
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.hero-container {
+    max-width: 1800px;
+    width: 100%;
+    aspect-ratio: 2560 / 1226;
+    margin: 35px auto;
+    background-image: url('sfondo_sito_v1.png'); /* Segnaposto trattore */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px; /* Angoli arrotondati come in foto */
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding: 50px;
+    margin-left: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/*  Homepage title effect  */
+
+.fancy {
+  font-size: 132px;
+  line-height: 1.4;
+   @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: 
+      url("background-text.png");
+    background-size: 100% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+/*  Homepage title effect  */
+
+.home_button {
+    margin-top: 40px;
+    background-color: #fff;
+    border: none;
+    width: 270px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.home_button:hover {
+    background-color: rgb(243, 243, 243);
+    color: #174ea6;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    transform: translateY(-4px);
+}
+
+
+
+/* Sezione Titolo Inferiore */
+.intro-section {
+    padding: 20px 50px;
+}
+
+.company-container {
+    padding: 50px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    border-radius: 20px;
+}
+
+.intro-section h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.intro-section p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.company-paragraph {
+    margin-bottom: 60px;
+}
+
+
+/* EDITING NEW AND USED IMAGES IN THE INTRO SECTION */
+.company-images-group {
+    display: flex;
+    justify-content: space-between; /* Crea lo spazio tra i due div */
+    gap: 60px; /* Crea lo spazio tra i due div */
+    max-width: 1800px; /* Larghezza massima della sezione */
+    margin: 0 auto; /* Centra tutto nella pagina */
+}
+
+.card-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-container-group {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.05);
+}
+
+
+.image-container-group img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container-group::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container-group:hover::after {
+    opacity: 1;
+}
+
+.image-container-group:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+/* Titoli e Paragrafi */
+.card-group h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-top: -30px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+.card-group p {
+    text-align: justify;            /* Testo giustificato */
+    color: #222;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+/* Stile dei Bottoni */
+.btn-green {
+    margin-top: 20px;
+    display: inline-block;
+    width: fit-content;             /* Il bottone si adatta al testo */
+    padding: 12px 35px;
+    background-color: #338636;      /* Colore verde come nello screen */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;            /* Bottone a pillola */
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-green:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);    /* Effetto smooth al passaggio del mouse */
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/*  SEZIONE RICAMBI, OFFICINA E ASSISTENZA  */
+.service-section {
+    max-width: 1800px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin: 35px auto;
+    background-image: url('off-layer.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+}
+
+/* La parte bianca con il taglio obliquo */
+.content-container {
+    padding: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.text-content {
+    max-width: 700px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-weight: 800;
+    
+}
+
+.text-content p {
+    color: #222;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    font-size: 18px;
+    text-align: justify; 
+}
+
+/* Bottoni */
+.button-group {
+    width: 600px;
+    margin-top: 40px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    width: 260px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.btn-assistenza {
+    background-color: #338636;
+    color: rgb(255, 255, 255);
+}
+
+.btn-ricambi {
+    background-color: #a52a2a;
+    color: rgb(255, 255, 255);
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+
+/*  SEZIONE BRANDS AND MARCHI  */
+.brand-grid-section {
+    max-width: 1800px;
+    width: 100%;
+    margin: 55px auto;
+    padding: 20px 50px;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+    text-align: justify;
+}
+
+.brands-text-container p {
+    font-size: 18px;
+}
+
+.brands-text-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.brand-grid {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    /* Crea 6 colonne di uguale dimensione */
+    grid-template-columns: repeat(6, 1fr); 
+    /* Spazio tra i loghi */
+    gap: 30px; 
+    padding: 40px 40px;
+    justify-items: center;
+}
+
+.brand-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.brand-item img {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.brand-item img:hover {
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE: Fondamentale per i dispositivi mobili */
+@media (max-width: 1024px) {
+    .brand-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 colonne su tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonne su smartphone */
+        gap: 15px;
+    }
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.brand-button {
+    width: 316px;
+    height: auto;
+    padding: 14px 30px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+}
+
+.brand-button:hover {
+    transform: translateY(-4px);
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+
+
+/*  SEZIONE ESSICCAZIONE  */
+.drying-section {
+    max-width: 1800px;
+    width: 100%;
+    height: 256px;
+    margin: 55px auto;
+    padding: 20px 50px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+/* ----------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/*  SEZIONE NEWS ED EVENTI  */
+.news-section {
+    max-width: 1800px;
+    width: 100%;
+    height: 256px;
+    margin: 55px auto;
+    padding: 20px 50px;
+    background-color: rosybrown;
+    border-radius: 20px;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/*  SEZIONE FOOTER  */
+.footer-section {
+    height: 256px;
+    padding: 20px 50px;
+    background-color: ghostwhite;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
