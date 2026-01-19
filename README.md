@@ -1,0 +1,1 @@
+This repository is dedicated entirely to building a website for my company. It's a personal project I've been developing for a couple of years, and I finally found GitHub, which allows you to see changes in real time from any device.
